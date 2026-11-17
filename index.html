@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NutriDay - Healthy Living</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f3f9f2;color:#243b2b}
+header{background:#247a48;color:white;padding:28px 15px;text-align:center}
+header h1{margin:0;font-size:34px}
+nav{background:#185d37;padding:14px;text-align:center}
+nav a{color:white;text-decoration:none;margin:10px}
+main{max-width:850px;margin:25px auto;padding:15px}
+.card{background:white;padding:22px;margin:18px 0;border-radius:15px;box-shadow:0 3px 12px #0001}
+h2{color:#247a48}
+button{background:#247a48;color:white;border:0;padding:12px 18px;border-radius:8px}
+select{padding:10px;border-radius:8px}
+footer{text-align:center;padding:20px;background:#185d37;color:white}
+</style>
+</head>
+<body>
+<header>
+<h1>🌿 NutriDay</h1>
+<p>Eat Healthy. Live Better.</p>
+</header>
+<nav>
+<a href="#about">About</a>
+<a href="#plans">Diet Plans</a>
+<a href="#tips">Health Tips</a>
+</nav>
+<main>
+<section class="card" id="about">
+<h2>Welcome to NutriDay!</h2>
+<p>Your simple guide to healthy eating and balanced nutrition.</p>
+</section>
+<section class="card" id="plans">
+<h2>Choose Your Diet Plan</h2>
+<select id="diet">
+<option value="veg">Vegetarian</option>
+<option value="nonveg">Non-Vegetarian</option>
+</select>
+<button onclick="showPlan()">Show My Plan</button>
+<div id="result"></div>
+</section>
+<section class="card" id="tips">
+<h2>Healthy Eating Tips</h2>
+<ul>
+<li>Drink enough water.</li>
+<li>Eat fresh fruits and vegetables.</li>
+<li>Include protein in your meals.</li>
+<li>Reduce sugary drinks and junk food.</li>
+<li>Exercise regularly.</li>
+</ul>
+</section>
+</main>
+<footer>© 2026 NutriDay | Healthy Living</footer>
+<script>
+function showPlan(){
+let type=document.getElementById('diet').value;
+let veg="<h3>Vegetarian Daily Plan</h3><p>Breakfast: Idli and sambar</p><p>Lunch: Rice, dal and vegetables</p><p>Snack: Fruits and nuts</p><p>Dinner: Chapati and paneer</p>";
+let nonveg="<h3>Non-Vegetarian Daily Plan</h3><p>Breakfast: Eggs and dosa</p><p>Lunch: Rice, fish and vegetables</p><p>Snack: Fruits and nuts</p><p>Dinner: Chapati and chicken</p>";
+document.getElementById('result').innerHTML=type==="veg"?veg:nonveg;
+}
+</script>
+</body>
+</html>
